@@ -1,0 +1,15 @@
+swirl()
+diabetes <- c ("Type1", "Type2", "Type3", "Type4")
+ndiabetes <- factor(diabetes)
+ndiabetes
+performance <- c("Poor", "Improved", "Excellent", "Poor")
+operformance <- factor(performance , ordered= TRUE)
+operformance
+?factor
+reverse_performance <- factor(c("Poor", "Improved", "Excellent"), levels = c(1=Poor, 2=Improved, 3=Excellent) )
+reverse_performance <- factor(c("Poor", "Improved", "Excellent"), levels = 1=Poor, 2=Improved, 3=Excellent)
+reverse_performance <- factor(c("Poor", "Improved", "Excellent"), levels = "1=Poor, 2=Improved, 3=Excellent")
+reverse_performance <- factor(c("Poor", "Improved", "Excellent"), levels = c("Poor", "Improved","Excellent"), ordered=TRUE)
+reverse_performance <- factor(performance, levels = c("Poor", "Improved","Excellent"), ordered=TRUE)
+reverse_performance
+savehistory("E:/Study Material/CSC-591 BI/R/Rhistory.Factors")

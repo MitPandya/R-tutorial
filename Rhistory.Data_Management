@@ -1,0 +1,57 @@
+swirl()
+?attach
+attach(mtcars)
+option(digits = 3)
+options(digits = 3)
+aggregate(x = mtcars, by = list(Cyl.Group = cyl), FUN = mean, na.rm = TRUE)
+aggregate(x = mtcars, by = list(Cyl.Group = cyl, Gear.group = gear), FUN = mean, na.rm = TRUE)
+aggregate(x = mtcars, by = list(Cyl.Group = cyl, Gear.Group = gear), FUN = mean, na.rm = TRUE)
+aggregate(x = mtcars, by = list(Cyl.Group = cyl, Gear.Group = gear), FUN = median, na.rm = TRUE)
+data(diamonds , package="ggplot2")
+install.packages("ggplot2")
+data(diamonds , package="ggplot2")
+aggregate(price ~ cut, diamonds, mean)
+aggregate(price ~ cut, color ~ cut, diamonds, mean)
+aggregate(price ~ cut + color ~ cut, diamonds, mean)
+aggregate(price ~ cut, diamonds, mean)+
+aggregate(color ~ cut, diamonds, mean)
+aggregate(price ~ cut+color, diamonds, mean)+
+1
+aggregate(price ~ cut+color, diamonds, mean)
+?cbind
+aggregate(cbind(price ~ cut, carat), diamonds, mean)
+aggregate(cbind(price ~ cut, 'carat'), diamonds, mean)
+aggregate(cbind(price ~ cut,carat ~ cut), diamonds, mean)
+cbind(aggregate(price ~ cut, diamonds, mean),aggregate(carat ~ cut, diamonds, mean))
+aggregate(cbind(price,carat) ~ cut+color, diamonds, mean)
+dim(mtcars)
+?transpose
+dim(t(mtcars))
+dfA <- data.frame(matrix('1', 3, 2),)
+dfA <- data.frame(matrix('1', 3, 2))
+dfA <- data.frame(matrix(rep(1,6), nrow=3))
+dfB <- data.frame(matrix(rep(2,6), nrow=3))
+rbind(dfA, dfB)
+cbind(dfA, dfB)
+colnames(dfA) <- c("ID", "AGE")
+colnames(dfA) <- c("ID", "Age")
+colnames(dfB) <- c("Weight", "ID")
+cbind(dfA, dfB, by = "ID")
+merge(dfA, dfB, by = "ID")
+dfA[2,1]
+dfA[2,1] <- 2
+merge(dfA, dfB, by = "ID")
+mtcars[order(mpg),]
+mtcars[order(mpg),order[-hp],]
+mtcars[order(mpg),order(-hp),]
+mtcars[order(mpg),order(hp)-,]
+mtcars[order(mpg),order(hp)-]
+mtcars[order(mpg),order(hp)]
+mtcars[order(mpg),order(hp),]
+mtcars[order(mpg),]
+mtcars[order(mpg, -hp),]
+subset(mtcars, mpg in [26,33], hp >= 65)
+subset(mtcars, mpg = [26,33], hp >= 65)
+subset(mtcars, mpg > 26 & mpg < 33, hp >= 65)
+subset(mtcars, mpg >= 26 & mpg <= 33 & hp >= 65, select = c(mpg,hp,cyl,wt))
+savehistory("E:/Study Material/CSC-591 BI/R/Rhistory.Data_Management")

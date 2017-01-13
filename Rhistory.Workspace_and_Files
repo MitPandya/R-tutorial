@@ -1,0 +1,34 @@
+swirl()
+getwd()
+ls()
+x <- 9
+ls()
+dir()
+?list.files
+args(list.files)
+old.dir <- getwd()
+?dir.create
+dir.create("testdir")
+seted("testdir")
+setwd("testdir")
+file.create("mytest.R")
+getwd()
+list.files()
+file.exists("mytest.R")
+file.info("mytest.R")
+?file.rename
+file.rename("mytest.R", "mytest2.R")
+?file.copy
+file.copy("mytest2.R", "mytest3.R")
+?file.path
+file.path("mytest3.R")
+file.path("folder1", "folder2")
+?dir.create
+dir.create(file.path("testdir2"),file.path("testdir3"))
+dir.create(file.path("testdir2","testdir3"), recursive = TRUE)
+unlink("testdir2", recursive = TRUE)
+setwd(old.ddir)
+setwd(old.dir)
+unlink("testdir")
+unlink("testdir", recursive = TRUE)
+savehistory("E:/Study Material/CSC-591 BI/R/Rhistory.Workspace_and_Files")
